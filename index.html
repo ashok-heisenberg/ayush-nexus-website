@@ -15,37 +15,37 @@
     }
 
     .header-container {
-      background-color: #fff;
       max-width: 1000px;
       margin: 0 auto;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: flex-end;
-      padding: 20px;
-      height: 250px;
+      padding: 10px 20px;
+      height: 200px;
       box-sizing: border-box;
       border-bottom: 3px solid #e5b76c;
     }
 
-    .header-text {
-      max-width: 60%;
+    .header-logo {
+      height: 120px;
+      width: auto;
     }
 
-    .header-text h1 {
+    .header-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-center h1 {
       margin: 0;
       font-size: 2.5em;
       color: #b38728;
     }
 
-    .header-text p {
+    .header-center p {
       margin: 5px 0 0 0;
       font-size: 1em;
       color: #444;
-    }
-
-    .header-logo {
-      max-width: 150px;
-      max-height: 150px;
     }
 
     nav {
@@ -125,11 +125,11 @@
 <body>
 
   <div class="header-container">
-    <div class="header-text">
+    <img src="header.jpg" alt="Ayush Nexus Logo" class="header-logo" />
+    <div class="header-center">
       <h1>Ayush Nexus</h1>
       <p>Private Limited – Exporting Eco-Conscious Dining</p>
     </div>
-    <img src="header.jpg" alt="Ayush Nexus Logo" class="header-logo" />
   </div>
 
   <nav>
@@ -199,8 +199,8 @@
   <section id="contact">
     <h2>Contact Us</h2>
     <p><strong>Email:</strong> info@ayushnexus.com</p>
-    <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
-    <p><strong>Address:</strong> #123, Industrial Zone, Bangalore, India – 560001</p>
+    <p><strong>Phone:</strong> +91-9035619018</p>
+    <p><strong>Address:</strong> #57, NRI Layout, Ramamurthynagar, Bangalore, India – 560001</p>
   </section>
 
   <footer>
