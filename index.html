@@ -11,31 +11,35 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background: #0c0c3e; /* dark blue background */
-      color: #e5b76c; /* gold-like text */
+      background: #0c0c3e;
+      color: #e5b76c;
     }
 
-    header {
-      background: url('header.jpg') no-repeat center center/cover;
-      height: 350px;
-      color: #fff;
+    .header-container {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      justify-content: flex-start;
+      align-items: flex-end;
+      background: url('header.jpg') no-repeat center center;
+      background-size: cover;
+      max-width: 1000px;
+      height: 250px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+      border-bottom: 5px solid #1b1b6d;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
-    header h1 {
-      font-size: 3em;
+    .header-container h1 {
       margin: 0;
+      font-size: 2.5em;
       color: #e5b76c;
-      text-shadow: 1px 1px 4px #000;
+      text-shadow: 1px 1px 3px #000;
     }
 
-    header p {
-      font-size: 1.2em;
+    .header-container p {
+      margin: 5px 0 0 0;
+      font-size: 1em;
       color: #f1d6a0;
     }
 
@@ -112,10 +116,13 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Ayush Nexus</h1>
-    <p>Private Limited – Exporting Eco-Conscious Dining</p>
-  </header>
+
+  <div class="header-container">
+    <div>
+      <h1>Ayush Nexus</h1>
+      <p>Private Limited – Exporting Eco-Conscious Dining</p>
+    </div>
+  </div>
 
   <nav>
     <a href="#about">About</a>
@@ -191,5 +198,6 @@
   <footer>
     <p>&copy; 2025 Ayush Nexus Private Limited. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
