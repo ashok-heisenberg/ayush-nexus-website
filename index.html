@@ -10,47 +10,50 @@
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      background: #0c0c3e;
-      color: #e5b76c;
+      background: #ffffff; /* White background */
+      color: #2c2c2c;
     }
 
     .header-container {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-end;
-      background: url('header.jpg') no-repeat center center;
+      background: url('images/header.jpg') no-repeat center center;
       background-size: cover;
       max-width: 1000px;
       height: 250px;
       margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
       padding: 20px;
       box-sizing: border-box;
-      border-bottom: 5px solid #1b1b6d;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      border-bottom: 3px solid #e5b76c;
     }
 
-    .header-container h1 {
+    .header-text {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .header-text h1 {
       margin: 0;
       font-size: 2.5em;
-      color: #e5b76c;
-      text-shadow: 1px 1px 3px #000;
+      color: #b38728;
     }
 
-    .header-container p {
+    .header-text p {
       margin: 5px 0 0 0;
       font-size: 1em;
-      color: #f1d6a0;
+      color: #444;
     }
 
     nav {
       text-align: center;
-      background: #1b1b6d;
+      background: #f1f1f1;
       padding: 10px;
+      border-bottom: 1px solid #ddd;
     }
 
     nav a {
-      color: #e5b76c;
+      color: #b38728;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
@@ -60,21 +63,22 @@
       padding: 30px 20px;
       max-width: 1000px;
       margin: 20px auto;
-      background: #181842;
+      background: #ffffff;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     footer {
-      background: #1b1b6d;
-      color: #e5b76c;
+      background: #f1f1f1;
+      color: #777;
       text-align: center;
       padding: 15px 0;
       margin-top: 40px;
+      border-top: 1px solid #ddd;
     }
 
     h2 {
-      color: #f1d6a0;
+      color: #b38728;
     }
 
     ul {
@@ -84,15 +88,15 @@
 
     ul li::before {
       content: "🌿 ";
-      color: #e5b76c;
+      color: #b38728;
     }
 
     .cta-buttons a {
       display: inline-block;
       margin: 10px;
       padding: 10px 20px;
-      background: #e5b76c;
-      color: #181842;
+      background: #b38728;
+      color: white;
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
@@ -111,14 +115,14 @@
       height: 200px;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
   </style>
 </head>
 <body>
 
   <div class="header-container">
-    <div>
+    <div class="header-text">
       <h1>Ayush Nexus</h1>
       <p>Private Limited – Exporting Eco-Conscious Dining</p>
     </div>
@@ -191,8 +195,8 @@
   <section id="contact">
     <h2>Contact Us</h2>
     <p><strong>Email:</strong> info@ayushnexus.com</p>
-    <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
-    <p><strong>Address:</strong> #123, Industrial Zone, Bangalore, India – 560001</p>
+    <p><strong>Phone:</strong> +91-9035619018</p>
+    <p><strong>Address:</strong> NRI Layout, Ramamurthynagar, Bangalore - 560016</p>
   </section>
 
   <footer>
