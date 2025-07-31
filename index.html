@@ -20,25 +20,19 @@
       background-color: #ffffff;
       border-bottom: 4px solid #7a530f;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      text-align: center;
     }
 
     .header-logo {
       height: 120px;
       width: auto;
-      margin: 10px;
-    }
-
-    .header-text {
-      flex: 1;
-      text-align: right;
-      margin-right: 20px;
+      margin: 10px auto;
     }
 
     .header-text h1 {
-      margin: 0;
+      margin: 10px 0 5px;
       font-size: 2em;
       color: #4b8b3b;
     }
@@ -50,54 +44,12 @@
       font-weight: bold;
     }
 
-    .language-switcher {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-
-    .language-switcher select {
-      padding: 5px 10px;
-      font-size: 0.9em;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      text-align: center;
-      background: #f5f3eb;
-      padding: 10px;
-      border-bottom: 1px solid #ded6b8;
-    }
-
-    nav a {
-      color: #a06f17;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #7a530f;
-    }
-
     section {
       padding: 30px 20px;
       background: #ffffff;
       border-radius: 8px;
       margin: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: #f5f3eb;
-      color: #777;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 40px;
-      border-top: 1px solid #ded6b8;
     }
 
     h2 {
@@ -149,47 +101,92 @@
       background-color: #fff;
     }
 
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #4b8b3b;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3a6f2c;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 999;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #f5f3eb;
+      color: #777;
+      text-align: center;
+      padding: 20px 10px;
+      border-top: 1px solid #ded6b8;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #4b8b3b;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
     @media (max-width: 600px) {
       .header-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .header-text {
-        text-align: center;
-        margin: 10px 0 0 0;
-      }
-
-      .header-text p {
-        font-size: 1.2em;
+        padding: 15px;
       }
 
       .header-logo {
         height: 100px;
       }
 
+      .header-text h1 {
+        font-size: 1.8em;
+      }
+
+      .header-text p {
+        font-size: 1.2em;
+      }
+
       section {
         margin: 15px 10px;
       }
-
-      .language-switcher {
-        top: 5px;
-        right: 5px;
-      }
     }
   </style>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-  <div class="language-switcher">
-    <select>
-      <option value="en">🌐 English</option>
-      <option value="hi">हिंदी</option>
-      <option value="ta">தமிழ்</option>
-      <option value="de">Deutsch</option>
-    </select>
-  </div>
 
   <div class="header-container">
     <img src="header.jpg" alt="Ayush Nexus Logo" class="header-logo" />
@@ -198,15 +195,6 @@
       <p>Exporting Eco-Conscious Tableware</p>
     </div>
   </div>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#images">Gallery</a>
-    <a href="#exports">Exports</a>
-    <a href="#certs">Certifications</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
   <section id="about">
     <h2>About Us</h2>
@@ -243,16 +231,31 @@
     </div>
   </section>
 
-  <section id="exports">
-    <h2>Global Exports</h2>
-    <p>We export to:</p>
-    <ul>
-      <li>Germany, USA, UK, Canada, Australia, Japan</li>
-      <li>Shipping via Air & Sea (FOB / CIF / DDP)</li>
-      <li>Documents: IEC, RCMC, FSSAI, Phytosanitary Certificates</li>
-    </ul>
+  <section id="contact">
+    <h2>Contact / Inquiry Form</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Inquiry</button>
+    </form>
+    <p><strong>Email:</strong> info@ayushnexus.com</p>
+    <p><strong>Phone:</strong> +91-9035619018</p>
+    <p><strong>Address:</strong> Bangalore, India – 560016</p>
   </section>
 
-  <section id="certs">
-    <h2>Certifications</h2>
-    <
+  <footer>
+    <p>&copy; 2025 AyushNexus Private Limited. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919035619018" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
