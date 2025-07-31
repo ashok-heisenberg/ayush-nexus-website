@@ -23,20 +23,24 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      animation: fadeIn 1.5s ease-in;
     }
 
     .header-logo {
       height: 120px;
       width: auto;
       margin: 10px;
-      animation: fadeIn 2s ease-in-out;
     }
 
     .header-text {
       flex: 1;
       text-align: right;
       margin-right: 20px;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #4b8b3b;
     }
 
     .header-text p {
@@ -46,7 +50,21 @@
       font-weight: bold;
     }
 
+    .language-switcher {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .language-switcher select {
+      padding: 5px 10px;
+      font-size: 0.9em;
+    }
+
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       text-align: center;
       background: #f5f3eb;
       padding: 10px;
@@ -131,11 +149,6 @@
       background-color: #fff;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     @media (max-width: 600px) {
       .header-container {
         flex-direction: column;
@@ -159,15 +172,30 @@
       section {
         margin: 15px 10px;
       }
+
+      .language-switcher {
+        top: 5px;
+        right: 5px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <div class="language-switcher">
+    <select>
+      <option value="en">🌐 English</option>
+      <option value="hi">हिंदी</option>
+      <option value="ta">தமிழ்</option>
+      <option value="de">Deutsch</option>
+    </select>
+  </div>
+
   <div class="header-container">
     <img src="header.jpg" alt="Ayush Nexus Logo" class="header-logo" />
     <div class="header-text">
-      <p><strong>Exporting Eco-Conscious Tableware</strong></p>
+      <h1>AyushNexus</h1>
+      <p>Exporting Eco-Conscious Tableware</p>
     </div>
   </div>
 
@@ -227,24 +255,4 @@
 
   <section id="certs">
     <h2>Certifications</h2>
-    <ul>
-      <li>FSSAI</li>
-      <li>ISO 9001:2015</li>
-      <li>SGS Tested</li>
-      <li>FDA (US) Compliance</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Email:</strong> info@ayushnexus.com</p>
-    <p><strong>Phone:</strong> +91-9035619018</p>
-    <p><strong>Address:</strong> Bangalore, India – 560016</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 AyushNexus Private Limited. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+    <
