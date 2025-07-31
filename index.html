@@ -15,19 +15,22 @@
     }
 
     .header-container {
+      width: 100%;
+      padding: 20px;
+      background-color: #a06f17; /* Logo color */
+      border-bottom: 4px solid #7a530f;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      padding: 30px 20px;
-      background-color: #f7e0b2; /* Blended golden tone */
-      border-bottom: 4px solid #a06f17;
+      animation: fadeIn 1.5s ease-in;
     }
 
     .header-logo {
-      height: 200px;
+      height: 180px;
       width: auto;
       margin: 10px 20px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .header-center {
@@ -38,13 +41,14 @@
     .header-center h1 {
       margin: 0;
       font-size: 4em;
-      color: #a06f17;
+      color: #ffffff;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .header-center p {
-      margin: 10px 0 0 0;
+      margin: 5px 0 0 0;
       font-size: 1.8em;
-      color: #555;
+      color: #f7e0b2;
     }
 
     nav {
@@ -67,16 +71,19 @@
     }
 
     section {
-      padding: 40px 30px;
+      padding: 30px 20px;
       background: #ffffff;
-      border-bottom: 1px solid #eee;
+      border-radius: 8px;
+      margin: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     footer {
       background: #f5f3eb;
       color: #777;
       text-align: center;
-      padding: 20px 10px;
+      padding: 15px 0;
+      margin-top: 40px;
       border-top: 1px solid #ded6b8;
     }
 
@@ -97,7 +104,7 @@
     .cta-buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 12px 24px;
+      padding: 10px 20px;
       background: #a06f17;
       color: #ffffff;
       text-decoration: none;
@@ -112,15 +119,15 @@
 
     .product-images {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       margin-top: 30px;
     }
 
     .product-images img {
       width: 100%;
-      height: auto;
-      max-height: 300px;
+      max-width: 360px;
+      height: 300px;
       object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.15);
@@ -129,14 +136,14 @@
       background-color: #fff;
     }
 
-    @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        align-items: center;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
+    @media (max-width: 600px) {
       .header-logo {
-        height: 140px;
+        height: 120px;
       }
 
       .header-center h1 {
@@ -147,13 +154,8 @@
         font-size: 1.2em;
       }
 
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
-
       section {
-        padding: 25px 15px;
+        margin: 15px 10px;
       }
     }
   </style>
@@ -163,6 +165,7 @@
   <div class="header-container">
     <img src="header.jpg" alt="Ayush Nexus Logo" class="header-logo" />
     <div class="header-center">
+      <h1>AyushNexus</h1>
       <p>Exporting Eco-Conscious Dining</p>
     </div>
   </div>
