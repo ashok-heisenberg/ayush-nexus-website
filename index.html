@@ -10,8 +10,8 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f9f7f1;
-      color: #1e1e1e;
+      background: #f4eee1; /* warm sand */
+      color: #3b2f2f; /* charcoal brown */
     }
 
     .header-container {
@@ -19,8 +19,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 20px 30px;
-      background-color: #ffffff;
-      border-bottom: 4px solid #7a530f;
+      background-color: #6b4f1d; /* earthy brown */
+      border-bottom: 4px solid #b58929; /* tribal mustard */
       flex-wrap: wrap;
     }
 
@@ -33,30 +33,31 @@
     .header-text {
       flex: 1;
       text-align: center;
+      margin-left: -30px; /* slight shift to left */
     }
 
     .header-text h1 {
       margin: 0;
       font-size: 2.8em;
-      color: #a06f17;
+      color: #e8dbc3; /* soft clay */
     }
 
     .header-text p {
       margin: 8px 0 0 0;
       font-size: 1.5em;
-      color: #a06f17;
+      color: #e8dbc3;
       font-weight: bold;
     }
 
     nav {
       text-align: center;
-      background: #f5f3eb;
+      background: #e8dbc3; /* soft clay */
       padding: 12px;
-      border-bottom: 1px solid #ded6b8;
+      border-bottom: 1px solid #d2c2a8;
     }
 
     nav a {
-      color: #a06f17;
+      color: #6b4f1d;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
@@ -64,7 +65,7 @@
     }
 
     nav a:hover {
-      color: #7a530f;
+      color: #4b7b3b; /* forest green */
     }
 
     section {
@@ -76,16 +77,16 @@
     }
 
     footer {
-      background: #f5f3eb;
-      color: #777;
+      background: #e8dbc3;
+      color: #3b2f2f;
       text-align: center;
       padding: 15px 0;
       margin-top: 40px;
-      border-top: 1px solid #ded6b8;
+      border-top: 1px solid #d2c2a8;
     }
 
     h2 {
-      color: #a06f17;
+      color: #6b4f1d;
     }
 
     ul {
@@ -95,14 +96,14 @@
 
     ul li::before {
       content: "🌿 ";
-      color: #4b8b3b;
+      color: #4b7b3b;
     }
 
     .cta-buttons a {
       display: inline-block;
       margin: 10px;
       padding: 10px 20px;
-      background: #a06f17;
+      background: #b58929; /* tribal mustard */
       color: #ffffff;
       text-decoration: none;
       font-weight: bold;
@@ -111,7 +112,7 @@
     }
 
     .cta-buttons a:hover {
-      background: #7a530f;
+      background: #4b7b3b;
     }
 
     .product-images {
@@ -128,7 +129,7 @@
       object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-      border: 2px solid #a06f17;
+      border: 2px solid #6b4f1d;
       padding: 4px;
       background-color: #fff;
     }
@@ -146,21 +147,19 @@
       }
 
       .header-text h1 {
-        font-size: 2.5em;
-          flex: 1;
-  text-align: center;
-  margin-left: -50px; /* Adjust alignment slightly to the left */
+        font-size: 2em;
       }
 
       .header-text p {
-        font-size: 1.6em;
-          flex: 1;
-  text-align: center;
-  margin-left: -50px; /* Adjust alignment slightly to the left */
+        font-size: 1.2em;
       }
 
       section {
         margin: 15px 10px;
+      }
+
+      .header-text {
+        margin-left: 0; /* Remove offset on small screens */
       }
     }
   </style>
