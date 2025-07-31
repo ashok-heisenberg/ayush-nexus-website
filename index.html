@@ -16,35 +16,30 @@
 
     .header-container {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
       padding: 20px 30px;
       background-color: #ffffff;
       border-bottom: 4px solid #7a530f;
-      flex-wrap: wrap;
+      text-align: center;
     }
 
     .header-logo {
       height: 120px;
       width: auto;
-      margin-right: 20px;
-    }
-
-    .header-text {
-      flex: 1;
-      text-align: center;
+      margin-bottom: 15px;
     }
 
     .header-text h1 {
       margin: 0;
       font-size: 2.8em;
-      color: #1e1e1e;
+      color: #a06f17;
     }
 
     .header-text p {
-      margin: 5px 0 0 0;
+      margin: 8px 0 0 0;
       font-size: 1.5em;
-      color: #4b8b3b;
+      color: #a06f17;
       font-weight: bold;
     }
 
@@ -134,16 +129,8 @@
     }
 
     @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        text-align: center;
-      }
-
       .header-logo {
         height: 100px;
-        margin: 0 0 15px 0;
       }
 
       .header-text h1 {
@@ -203,6 +190,22 @@
     <img src="plate2.jpg" alt="Areca Plate 2" />
     <img src="plate3.jpg" alt="Areca Plate 3" />
     <img src="plate4.jpg" alt="Areca Plate 4" />
+  </section>
+
+  <section id="exports">
+    <h2>Exports</h2>
+    <p>We currently export our products to the USA, UK, and Europe, complying with international quality and sustainability standards.</p>
+  </section>
+
+  <section id="certs">
+    <h2>Certifications</h2>
+    <ul>
+      <li>ISO 9001:2015 – Quality Management System</li>
+      <li>FDA Approved – Food Safety Standards (USA)</li>
+      <li>FSSAI – India Food Safety Registration</li>
+      <li>EcoCert – Sustainable Material Compliance</li>
+      <li>RCMC from APEDA – Export Authorization</li>
+    </ul>
   </section>
 
   <footer>
