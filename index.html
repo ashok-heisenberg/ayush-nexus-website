@@ -5,17 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="AyushNexus Private Limited – Exporters of biodegradable areca plates to the international market." />
   <title>AyushNexus Private Limited</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: #edf6ec; /* soft mint */
-      color: #2e3d26;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f7f1;
+      color: #1e1e1e;
     }
 
     .header-container {
@@ -23,8 +19,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 20px 30px;
-      background-color: #8cbf3f; /* leafy green */
-      border-bottom: 4px solid #476930;
+      background-color: #ffffff;
+      border-bottom: 4px solid #7a530f;
       flex-wrap: wrap;
     }
 
@@ -37,33 +33,30 @@
     .header-text {
       flex: 1;
       text-align: center;
-      margin-left: -30px;
     }
 
     .header-text h1 {
       margin: 0;
       font-size: 2.8em;
-      color: #ffffff;
-      font-family: 'Amatic SC', cursive;
+      color: #a06f17;
     }
 
     .header-text p {
       margin: 8px 0 0 0;
       font-size: 1.5em;
-      color: #ffffff;
+      color: #a06f17;
       font-weight: bold;
-      font-family: 'Amatic SC', cursive;
     }
 
     nav {
       text-align: center;
-      background: #d8edc2;
+      background: #f5f3eb;
       padding: 12px;
-      border-bottom: 1px solid #b2cf9d;
+      border-bottom: 1px solid #ded6b8;
     }
 
     nav a {
-      color: #476930;
+      color: #a06f17;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
@@ -71,45 +64,28 @@
     }
 
     nav a:hover {
-      color: #2e3d26;
+      color: #7a530f;
     }
 
     section {
-      position: relative;
-      overflow: hidden;
-      padding: 60px 20px;
-      background: url('https://www.transparenttextures.com/patterns/aztec.png') repeat, #f6fbf3;
+      padding: 30px 20px;
+      background: #ffffff;
       border-radius: 8px;
       margin: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    section::before,
-    section::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 40px;
-      background: url('https://www.svgrepo.com/show/516861/leaves-border.svg') repeat-x center;
-      background-size: contain;
-      position: absolute;
-      left: 0;
-      z-index: 1;
-    }
-
-    section::before {
-      top: 0;
-      transform: rotate(180deg);
-    }
-
-    section::after {
-      bottom: 0;
+    footer {
+      background: #f5f3eb;
+      color: #777;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      border-top: 1px solid #ded6b8;
     }
 
     h2 {
-      color: #476930;
-      font-family: 'Amatic SC', cursive;
-      font-size: 2.2em;
+      color: #a06f17;
     }
 
     ul {
@@ -119,14 +95,14 @@
 
     ul li::before {
       content: "🌿 ";
-      color: #6ba539;
+      color: #4b8b3b;
     }
 
     .cta-buttons a {
       display: inline-block;
       margin: 10px;
       padding: 10px 20px;
-      background: #6ba539;
+      background: #a06f17;
       color: #ffffff;
       text-decoration: none;
       font-weight: bold;
@@ -135,7 +111,7 @@
     }
 
     .cta-buttons a:hover {
-      background: #4b7b3b;
+      background: #7a530f;
     }
 
     .product-images {
@@ -151,19 +127,10 @@
       height: 300px;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      border: 2px solid #8cbf3f;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      border: 2px solid #a06f17;
       padding: 4px;
-      background-color: #ffffff;
-    }
-
-    footer {
-      background: #d8edc2;
-      color: #2e3d26;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 40px;
-      border-top: 1px solid #b2cf9d;
+      background-color: #fff;
     }
 
     @media (max-width: 768px) {
@@ -179,24 +146,25 @@
       }
 
       .header-text h1 {
-        font-size: 2em;
+        font-size: 2.5em;
+          flex: 1;
+  text-align: center;
+  margin-left: -50px; /* Adjust alignment slightly to the left */
       }
 
       .header-text p {
-        font-size: 1.2em;
+        font-size: 1.6em;
+          flex: 1;
+  text-align: center;
+  margin-left: -50px; /* Adjust alignment slightly to the left */
       }
 
       section {
         margin: 15px 10px;
       }
-
-      .header-text {
-        margin-left: 0;
-      }
     }
   </style>
 </head>
-
 <body>
 
   <div class="header-container">
@@ -242,7 +210,7 @@
     <img src="arecaplates.jpg" alt="arecaplates" />
   </section>
 
-  <section id="exports">
+ <section id="exports">
     <h2>Global Exports</h2>
     <p>We export to:</p>
     <ul>
