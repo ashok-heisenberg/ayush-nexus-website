@@ -17,38 +17,33 @@
     .header-container {
       width: 100%;
       padding: 20px;
-      background-color: #d4edda;
+      background-color: #ffffff;
       border-bottom: 4px solid #7a530f;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       animation: fadeIn 1.5s ease-in;
     }
 
     .header-logo {
-      height: 180px;
+      height: 120px;
       width: auto;
-      margin: 10px 20px;
+      margin: 10px;
       animation: fadeIn 2s ease-in-out;
     }
 
-    .header-center {
-      text-align: center;
-      flex: 1 1 100%;
+    .header-text {
+      flex: 1;
+      text-align: right;
+      margin-right: 20px;
     }
 
-    .header-center h1 {
+    .header-text p {
       margin: 0;
-      font-size: 4em;
-      color: #ffffff;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .header-center p {
-      margin: 5px 0 0 0;
-      font-size: 1.8em;
-      color: #f7e0b2;
+      font-size: 1.5em;
+      color: #4b8b3b;
+      font-weight: bold;
     }
 
     nav {
@@ -142,16 +137,23 @@
     }
 
     @media (max-width: 600px) {
-      .header-logo {
-        height: 120px;
+      .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
 
-      .header-center h1 {
-        font-size: 2.5em;
+      .header-text {
+        text-align: center;
+        margin: 10px 0 0 0;
       }
 
-      .header-center p {
+      .header-text p {
         font-size: 1.2em;
+      }
+
+      .header-logo {
+        height: 100px;
       }
 
       section {
@@ -164,8 +166,8 @@
 
   <div class="header-container">
     <img src="header.jpg" alt="Ayush Nexus Logo" class="header-logo" />
-    <div class="header-center">
-      <p>Exporting Eco-Conscious Tableware</p>
+    <div class="header-text">
+      <p><strong>Exporting Eco-Conscious Tableware</strong></p>
     </div>
   </div>
 
