@@ -15,36 +15,34 @@
     }
 
     .header-container {
-      width: 100%;
-      padding: 20px;
-      background-color: #ffffff;
-      border-bottom: 4px solid #7a530f;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      padding: 20px 30px;
+      background-color: #ffffff;
+      border-bottom: 4px solid #7a530f;
+      flex-wrap: wrap;
     }
 
     .header-logo {
       height: 120px;
       width: auto;
-      margin: 10px;
+      margin-right: 20px;
     }
 
     .header-text {
       flex: 1;
-      text-align: right;
-      margin-right: 20px;
+      text-align: center;
     }
 
     .header-text h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.8em;
       color: #1e1e1e;
     }
 
     .header-text p {
-      margin: 0;
+      margin: 5px 0 0 0;
       font-size: 1.5em;
       color: #4b8b3b;
       font-weight: bold;
@@ -53,7 +51,7 @@
     nav {
       text-align: center;
       background: #f5f3eb;
-      padding: 10px;
+      padding: 12px;
       border-bottom: 1px solid #ded6b8;
     }
 
@@ -135,28 +133,25 @@
       background-color: #fff;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .header-container {
         flex-direction: column;
         align-items: center;
+        padding: 20px;
         text-align: center;
-      }
-
-      .header-text {
-        text-align: center;
-        margin: 10px 0 0 0;
-      }
-
-      .header-text h1 {
-        font-size: 1.8em;
-      }
-
-      .header-text p {
-        font-size: 1.2em;
       }
 
       .header-logo {
         height: 100px;
+        margin: 0 0 15px 0;
+      }
+
+      .header-text h1 {
+        font-size: 2em;
+      }
+
+      .header-text p {
+        font-size: 1.2em;
       }
 
       section {
@@ -171,7 +166,7 @@
     <img src="header.jpg" alt="Ayush Nexus Logo" class="header-logo" />
     <div class="header-text">
       <h1>AyushNexus</h1>
-      <p><strong>Exporting Eco-Conscious Tableware</strong></p>
+      <p>Exporting Eco-Conscious Tableware</p>
     </div>
   </div>
 
@@ -186,64 +181,28 @@
 
   <section id="about">
     <h2>About Us</h2>
-    <p>We are an Indian exporter of biodegradable areca plates made from naturally fallen palm leaves. Our mission is to replace plastic tableware with sustainable alternatives across the globe.</p>
-    <ul>
-      <li>100% Natural & Chemical-Free</li>
-      <li>ISO & FDA-certified manufacturing units</li>
-      <li>Custom branding & private label options</li>
-      <li>Exports worldwide with timely shipping</li>
-    </ul>
+    <p>We are committed to providing eco-friendly alternatives through our biodegradable areca plates, serving the global market with sustainability in mind.</p>
   </section>
 
   <section id="products">
     <h2>Our Products</h2>
     <ul>
-      <li>Round Areca Plates – 6", 8", 10", 12"</li>
-      <li>Square Areca Plates – 6", 8", 10"</li>
-      <li>Bowls & Trays – 250ml to 1000ml</li>
-      <li>3 & 5 Compartment Plates</li>
+      <li>Round Areca Plates</li>
+      <li>Square Areca Plates</li>
+      <li>Areca Bowls</li>
+      <li>Compartmental Trays</li>
     </ul>
     <div class="cta-buttons">
-      <a href="#contact">Request a Quote</a>
-      <a href="#contact">Become a Buyer</a>
+      <a href="#contact">Request Quote</a>
+      <a href="#catalog">Download Catalog</a>
     </div>
   </section>
 
-  <section id="images">
-    <h2>Areca Plate Gallery</h2>
-    <div class="product-images">
-      <img src="bidegradableplate.jpeg" alt="Areca Plate 1" />
-      <img src="Biodegradable-Palm-Leaf-Plate.jpeg" alt="Areca Plate 2" />
-      <img src="palmleafplate.jpeg" alt="Areca Plate 3" />
-      <img src="arecaplates.jpg" alt="Areca Plate 4" />
-    </div>
-  </section>
-
-  <section id="exports">
-    <h2>Global Exports</h2>
-    <p>We export to:</p>
-    <ul>
-      <li>Germany, USA, UK, Canada, Australia, Japan</li>
-      <li>Shipping via Air & Sea (FOB / CIF / DDP)</li>
-      <li>Documents: IEC, RCMC, FSSAI, Phytosanitary Certificates</li>
-    </ul>
-  </section>
-
-  <section id="certs">
-    <h2>Certifications</h2>
-    <ul>
-      <li>FSSAI</li>
-      <li>ISO 9001:2015</li>
-      <li>SGS Tested</li>
-      <li>FDA (US) Compliance</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Email:</strong> info@ayushnexus.com</p>
-    <p><strong>Phone:</strong> +91-9035619018</p>
-    <p><strong>Address:</strong> Bangalore, India – 560016</p>
+  <section id="images" class="product-images">
+    <img src="plate1.jpg" alt="Areca Plate 1" />
+    <img src="plate2.jpg" alt="Areca Plate 2" />
+    <img src="plate3.jpg" alt="Areca Plate 3" />
+    <img src="plate4.jpg" alt="Areca Plate 4" />
   </section>
 
   <footer>
