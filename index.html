@@ -48,6 +48,16 @@
       font-weight: bold;
     }
 
+    .header-contact {
+      text-align: right;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .header-contact p {
+      margin: 2px 0;
+    }
+
     nav {
       text-align: center;
       background: #f5f3eb;
@@ -145,18 +155,14 @@
         margin-bottom: 10px;
       }
 
-      .header-text h1 {
-        font-size: 2.5em;
-          flex: 1;
-  text-align: center;
-  margin-left: -50px; /* Adjust alignment slightly to the left */
+      .header-text h1,
+      .header-text p {
+        text-align: center;
       }
 
-      .header-text p {
-        font-size: 1.6em;
-          flex: 1;
-  text-align: center;
-  margin-left: -50px; /* Adjust alignment slightly to the left */
+      .header-contact {
+        text-align: center;
+        margin-top: 10px;
       }
 
       section {
@@ -169,9 +175,15 @@
 
   <div class="header-container">
     <img src="header.jpg" alt="Ayush Nexus Logo" class="header-logo" />
+
     <div class="header-text">
       <h1>AyushNexus</h1>
       <p>Exporting Eco-Conscious Tableware</p>
+    </div>
+
+    <div class="header-contact">
+      <p><strong>Email:</strong> info@ayushnexus.com</p>
+      <p><strong>Phone:</strong> +91-9035619018</p>
     </div>
   </div>
 
@@ -210,7 +222,7 @@
     <img src="arecaplates.jpg" alt="arecaplates" />
   </section>
 
- <section id="exports">
+  <section id="exports">
     <h2>Global Exports</h2>
     <p>We export to:</p>
     <ul>
