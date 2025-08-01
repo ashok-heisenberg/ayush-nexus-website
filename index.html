@@ -143,6 +143,32 @@
       background-color: #fff;
     }
 
+    form {
+      max-width: 500px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #a06f17;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #7a530f;
+    }
+
     @media (max-width: 768px) {
       .header-container {
         flex-direction: column;
@@ -162,7 +188,6 @@
 
       .header-contact {
         text-align: center;
-        align-self: bottom;
         margin-top: 10px;
       }
 
@@ -212,7 +237,7 @@
     </ul>
     <div class="cta-buttons">
       <a href="#contact">Request Quote</a>
-      <a href="#catalog">Download Catalog</a>
+      <a href="AyushNexus_Areca_Catalog.pdf" download>Download Catalog</a>
     </div>
   </section>
 
@@ -245,6 +270,19 @@
 
   <section id="contact">
     <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Save / Connect</button>
+    </form>
+
     <p><strong>Email:</strong> info@ayushnexus.com</p>
     <p><strong>Phone:</strong> +91-9035619018</p>
     <p><strong>Address:</strong> Bangalore, India – 560016</p>
@@ -253,6 +291,28 @@
   <footer>
     <p>&copy; 2025 AyushNexus Private Limited. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // WhatsApp
+      const phone = "919035619018";
+      const whatsappMessage = `New Inquiry from Website:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+      const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappURL, '_blank');
+
+      // Email
+      const subject = "Website Contact Request - AyushNexus";
+      const body = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+      const mailtoURL = `mailto:info@ayushnexus.com?subject=${subject}&body=${body}`;
+      window.location.href = mailtoURL;
+    });
+  </script>
 
 </body>
 </html>
