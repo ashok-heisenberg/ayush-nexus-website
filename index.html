@@ -141,32 +141,8 @@
       border: 2px solid #a06f17;
       padding: 4px;
       background-color: #fff;
-    }
-
-    form {
-      max-width: 500px;
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    input, textarea, button {
-      padding: 10px;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      background-color: #a06f17;
-      color: white;
       cursor: pointer;
-      border: none;
-    }
-
-    button:hover {
-      background-color: #7a530f;
+      transition: transform 0.3s ease;
     }
 
     @media (max-width: 768px) {
@@ -188,6 +164,7 @@
 
       .header-contact {
         text-align: center;
+        align-self: bottom;
         margin-top: 10px;
       }
 
@@ -195,18 +172,76 @@
         margin: 15px 10px;
       }
     }
+
+    /* Lightbox styling */
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #fff;
+    }
+
+    #lightbox:target {
+      display: flex;
+    }
+
+    /* Contact Form */
+    .form-field {
+      margin-bottom: 15px;
+    }
+
+    .form-field label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+
+    .form-field input[type="checkbox"] {
+      width: auto;
+      display: inline-block;
+    }
+
+    .form-submit {
+      background: #a06f17;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
+
 <body>
 
   <div class="header-container">
     <img src="header.jpg" alt="Ayush Nexus Logo" class="header-logo" />
-
     <div class="header-text">
       <h1>AyushNexus</h1>
       <p>Exporting Eco-Conscious Tableware</p>
     </div>
-
     <div class="header-contact">
       <p><strong>Email:</strong> info@ayushnexus.com</p>
       <p><strong>Phone:</strong> +91-9035619018</p>
@@ -237,16 +272,20 @@
     </ul>
     <div class="cta-buttons">
       <a href="#contact">Request Quote</a>
-      <a href="AyushNexus_Areca_Catalog.pdf" download>Download Catalog</a>
+      <a href="AyushNexus_Catalog.pdf" download>Download Catalog</a>
     </div>
   </section>
 
   <section id="images" class="product-images">
-    <img src="Biodegradable-Palm-Leaf-Plate.jpeg" alt="Biodegradable-Palm-Leaf-Plate" />
-    <img src="bidegradableplate.jpeg" alt="biodegradableplate" />
-    <img src="palmleafplate.jpeg" alt="palmleafplate" />
-    <img src="arecaplates.jpg" alt="arecaplates" />
+    <img src="Biodegradable-Palm-Leaf-Plate.jpeg" alt="Biodegradable Palm Leaf Plate" onclick="showLightbox(this.src)" />
+    <img src="bidegradableplate.jpeg" alt="Biodegradable Plate" onclick="showLightbox(this.src)" />
+    <img src="palmleafplate.jpeg" alt="Palm Leaf Plate" onclick="showLightbox(this.src)" />
+    <img src="arecaplates.jpg" alt="Areca Plates" onclick="showLightbox(this.src)" />
   </section>
+
+  <div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="Preview" />
+  </div>
 
   <section id="exports">
     <h2>Global Exports</h2>
@@ -269,23 +308,32 @@
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit">Save / Connect</button>
+    <h2>Connect with Us</h2>
+    <form onsubmit="sendForm(event)">
+      <div class="form-field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required />
+      </div>
+      <div class="form-field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required />
+      </div>
+      <div class="form-field">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required />
+      </div>
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" required></textarea>
+      </div>
+      <div class="form-field">
+        <label>
+          <input type="checkbox" required />
+          I agree to the <a href="#">Privacy Policy</a> and give consent to be contacted by AyushNexus.
+        </label>
+      </div>
+      <button type="submit" class="form-submit">Save / Connect</button>
     </form>
-
-    <p><strong>Email:</strong> info@ayushnexus.com</p>
-    <p><strong>Phone:</strong> +91-9035619018</p>
-    <p><strong>Address:</strong> Bangalore, India – 560016</p>
   </section>
 
   <footer>
@@ -293,25 +341,25 @@
   </footer>
 
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
+    function showLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
 
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
+    function sendForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const msg = document.getElementById('message').value;
 
-      // WhatsApp
-      const phone = "919035619018";
-      const whatsappMessage = `New Inquiry from Website:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
-      const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`;
+      const whatsappMsg = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${msg}`;
+      const whatsappURL = `https://wa.me/919035619018?text=${whatsappMsg}`;
       window.open(whatsappURL, '_blank');
 
-      // Email
-      const subject = "Website Contact Request - AyushNexus";
-      const body = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-      const mailtoURL = `mailto:info@ayushnexus.com?subject=${subject}&body=${body}`;
-      window.location.href = mailtoURL;
-    });
+      const mailtoLink = `mailto:info@ayushnexus.com?subject=New Inquiry from ${name}&body=${whatsappMsg.replace(/%0A/g, '\n')}`;
+      window.open(mailtoLink, '_blank');
+    }
   </script>
 
 </body>
