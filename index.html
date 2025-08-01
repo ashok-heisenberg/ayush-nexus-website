@@ -14,7 +14,7 @@
       color: #1e1e1e;
     }
 
-     .form-field {
+    .form-field {
       margin-bottom: 15px;
       max-width: 300px;
     }
@@ -47,15 +47,6 @@
       border-radius: 6px;
       font-weight: bold;
       cursor: pointer;
-    }
-
-    section#contact {
-      padding: 30px 20px;
-      background: #ffffff;
-      border-radius: 8px;
-      margin: 20px auto;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      max-width: 600px;
     }
     .header-container {
       display: flex;
@@ -351,34 +342,44 @@
   </section>
 
 <section id="contact">
-    <h2>Connect with Us</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="sendWhatsAppMessage()">
-      <div class="form-field">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required />
-      </div>
-      <div class="form-field">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-field">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" required />
-      </div>
-      <div class="form-field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="3"></textarea>
-      </div>
-      <div class="form-field">
+  <h2>Connect with Us</h2>
+  <form onsubmit="sendForm(event)">
+    <div class="form-field">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+    </div>
+    <div class="form-field">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required />
+    </div>
+    <div class="form-field">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required />
+    </div>
+    <div class="form-field">
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" required></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>
         <input type="checkbox" id="consent1" required />
-        <label for="consent1">
-          I agree to the <a href="AyushNexus_Privacy_Policy.pdf" target="_blank">Privacy Policy</a> and consent to communication from AyushNexus.
-        </label>
-      </div>
-      <button type="submit" class="form-submit">Save / Connect</button>
-    </form>
-  </section>
-  
+        I agree to the 
+        <a href="AyushNexus_Privacy_Policy.pdf" target="_blank">Privacy Policy</a>.
+      </label>
+    </div>
+
+    <div class="form-field">
+      <label>
+        <input type="checkbox" id="consent2" required />
+        I consent to be contacted via email/phone/WhatsApp.
+      </label>
+    </div>
+
+    <button type="submit" class="form-submit">Save / Connect</button>
+  </form>
+</section>
+
   <footer>
     <p>&copy; 2025 AyushNexus Private Limited. All rights reserved.</p>
   </footer>
