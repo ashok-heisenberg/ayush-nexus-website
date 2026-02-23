@@ -1,388 +1,1204 @@
+Gemini
+Website Redesign for Premium Feel
+Enterprise logo
+Conversation with Gemini
+You said
+this is my website "<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="AyushNexus Private Limited – Exporters of biodegradable areca plates to the international market." />
+
+  <title>AyushNexus Private Limited</title>
+
+  <style>
+
+    body {
+
+      margin: 0;
+
+      padding: 0;
+
+      font-family: 'Segoe UI', sans-serif;
+
+      background: #f9f7f1;
+
+      color: #1e1e1e;
+
+    }
+
+
+
+    .form-field {
+
+      margin-bottom: 15px;
+
+      max-width: 300px;
+
+    }
+
+
+
+    .form-field label {
+
+      display: block;
+
+      margin-bottom: 5px;
+
+      font-weight: bold;
+
+    }
+
+
+
+    .form-field input,
+
+    .form-field textarea {
+
+      width: 100%;
+
+      padding: 6px;
+
+      border: 1px solid #aaa;
+
+      border-radius: 5px;
+
+      font-size: 0.9em;
+
+    }
+
+
+
+    .form-field input[type="checkbox"] {
+
+      width: auto;
+
+      display: inline-block;
+
+    }
+
+
+
+    .form-submit {
+
+      background: #a06f17;
+
+      color: #fff;
+
+      border: none;
+
+      padding: 8px 16px;
+
+      border-radius: 6px;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+    }
+
+    .header-container {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      padding: 20px 30px;
+
+      background-color: #ffffff;
+
+      border-bottom: 4px solid #7a530f;
+
+      flex-wrap: wrap;
+
+    }
+
+
+
+    .header-logo {
+
+      height: 120px;
+
+      width: auto;
+
+      flex-shrink: 0;
+
+    }
+
+
+
+    .header-text {
+
+      flex: 1;
+
+      text-align: center;
+
+    }
+
+
+
+    .header-text h1 {
+
+      margin: 0;
+
+      font-size: 2.8em;
+
+      color: #a06f17;
+
+    }
+
+
+
+    .header-text p {
+
+      margin: 8px 0 0 0;
+
+      font-size: 1.5em;
+
+      color: #a06f17;
+
+      font-weight: bold;
+
+    }
+
+
+
+    .header-contact {
+
+      text-align: right;
+
+      font-size: 0.9em;
+
+      color: #555;
+
+    }
+
+
+
+    .header-contact p {
+
+      margin: 2px 0;
+
+    }
+
+
+
+    nav {
+
+      text-align: center;
+
+      background: #f5f3eb;
+
+      padding: 12px;
+
+      border-bottom: 1px solid #ded6b8;
+
+    }
+
+
+
+    nav a {
+
+      color: #a06f17;
+
+      margin: 0 15px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      transition: color 0.3s;
+
+    }
+
+
+
+    nav a:hover {
+
+      color: #7a530f;
+
+    }
+
+
+
+    section {
+
+      padding: 30px 20px;
+
+      background: #ffffff;
+
+      border-radius: 8px;
+
+      margin: 20px;
+
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+    }
+
+
+
+    footer {
+
+      background: #f5f3eb;
+
+      color: #777;
+
+      text-align: center;
+
+      padding: 15px 0;
+
+      margin-top: 40px;
+
+      border-top: 1px solid #ded6b8;
+
+    }
+
+
+
+    h2 {
+
+      color: #a06f17;
+
+    }
+
+
+
+    ul {
+
+      list-style: none;
+
+      padding-left: 0;
+
+    }
+
+
+
+    ul li::before {
+
+      content: "🌿 ";
+
+      color: #4b8b3b;
+
+    }
+
+
+
+    .cta-buttons a {
+
+      display: inline-block;
+
+      margin: 10px;
+
+      padding: 10px 20px;
+
+      background: #a06f17;
+
+      color: #ffffff;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      border-radius: 5px;
+
+      transition: background 0.3s;
+
+    }
+
+
+
+    .cta-buttons a:hover {
+
+      background: #7a530f;
+
+    }
+
+
+
+    .product-images {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+      gap: 20px;
+
+      margin-top: 30px;
+
+    }
+
+
+
+    .product-images img {
+
+      width: 100%;
+
+      max-width: 360px;
+
+      height: 300px;
+
+      object-fit: cover;
+
+      border-radius: 10px;
+
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+
+      border: 2px solid #a06f17;
+
+      padding: 4px;
+
+      background-color: #fff;
+
+      cursor: pointer;
+
+      transition: transform 0.3s ease;
+
+    }
+
+
+
+    @media (max-width: 768px) {
+
+      .header-container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+      }
+
+
+
+      .header-logo {
+
+        height: 100px;
+
+        margin-bottom: 10px;
+
+      }
+
+
+
+      .header-text h1,
+
+      .header-text p {
+
+        text-align: center;
+
+      }
+
+
+
+      .header-contact {
+
+        text-align: center;
+
+        align-self: bottom;
+
+        margin-top: 10px;
+
+      }
+
+
+
+      section {
+
+        margin: 15px 10px;
+
+      }
+
+    }
+
+
+
+    /* Lightbox styling */
+
+    #lightbox {
+
+      display: none;
+
+      position: fixed;
+
+      z-index: 999;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      background: rgba(0, 0, 0, 0.85);
+
+      justify-content: center;
+
+      align-items: center;
+
+    }
+
+
+
+    #lightbox img {
+
+      max-width: 90%;
+
+      max-height: 90%;
+
+      border-radius: 10px;
+
+      box-shadow: 0 0 20px #fff;
+
+    }
+
+
+
+    #lightbox:target {
+
+      display: flex;
+
+    }
+
+
+
+    /* Contact Form */
+
+    .form-field {
+
+      margin-bottom: 15px;
+
+    }
+
+
+
+    .form-field label {
+
+      display: block;
+
+      margin-bottom: 5px;
+
+      font-weight: bold;
+
+    }
+
+
+
+    .form-field input,
+
+    .form-field textarea {
+
+      width: 100%;
+
+      padding: 8px;
+
+      border: 1px solid #aaa;
+
+      border-radius: 5px;
+
+    }
+
+
+
+    .form-field input[type="checkbox"] {
+
+      width: auto;
+
+      display: inline-block;
+
+    }
+
+
+
+    .form-submit {
+
+      background: #a06f17;
+
+      color: #fff;
+
+      border: none;
+
+      padding: 10px 18px;
+
+      border-radius: 6px;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+
+  <div class="header-container">
+
+    <img src="header.jpg" alt="Ayush Nexus Logo" class="header-logo" />
+
+    <div class="header-text">
+
+      <h1>AyushNexus</h1>
+
+      <p>Exporting Eco-Conscious Tableware</p>
+
+    </div>
+
+    <div class="header-contact">
+
+      <p><strong>Email:</strong> info@ayushnexus.com</p>
+
+      <p><strong>Phone:</strong> +91-9035619018</p>
+
+    </div>
+
+  </div>
+
+
+
+  <nav>
+
+    <a href="#about">About</a>
+
+    <a href="#products">Products</a>
+
+    <a href="#images">Gallery</a>
+
+    <a href="#exports">Exports</a>
+
+    <a href="#certs">Certifications</a>
+
+    <a href="#contact">Contact</a>
+
+  </nav>
+
+
+
+  <section id="about">
+
+    <h2>About Us</h2>
+
+    <p>We are committed to providing eco-friendly alternatives through our biodegradable areca plates, serving the global market with sustainability in mind.</p>
+
+  </section>
+
+
+
+  <section id="products">
+
+    <h2>Our Products</h2>
+
+    <ul>
+
+      <li>Round Areca Plates</li>
+
+      <li>Square Areca Plates</li>
+
+      <li>Areca Bowls</li>
+
+      <li>Compartmental Trays</li>
+
+    </ul>
+
+    <div class="cta-buttons">
+
+      <a href="#contact">Request Quote</a>
+
+      <a href="AyushNexus_Catalog.pdf" download>Download Catalog</a>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="images" class="product-images">
+
+    <img src="Biodegradable-Palm-Leaf-Plate.jpeg" alt="Biodegradable Palm Leaf Plate" onclick="showLightbox(this.src)" />
+
+    <img src="bidegradableplate.jpeg" alt="Biodegradable Plate" onclick="showLightbox(this.src)" />
+
+    <img src="palmleafplate.jpeg" alt="Palm Leaf Plate" onclick="showLightbox(this.src)" />
+
+    <img src="arecaplates.jpg" alt="Areca Plates" onclick="showLightbox(this.src)" />
+
+  </section>
+
+
+
+  <div id="lightbox" onclick="this.style.display='none'">
+
+    <img id="lightbox-img" src="" alt="Preview" />
+
+  </div>
+
+
+
+  <section id="exports">
+
+    <h2>Global Exports</h2>
+
+    <p>We export to:</p>
+
+    <ul>
+
+      <li>Germany, USA, UK, Canada, Australia, Japan</li>
+
+      <li>Shipping via Air & Sea (FOB / CIF / DDP)</li>
+
+      <li>Documents: IEC, RCMC, FSSAI, Phytosanitary Certificates</li>
+
+    </ul>
+
+  </section>
+
+
+
+  <section id="certs">
+
+    <h2>Certifications</h2>
+
+    <ul>
+
+      <li>FSSAI</li>
+
+      <li>ISO 9001:2015</li>
+
+      <li>SGS Tested</li>
+
+      <li>FDA (US) Compliance</li>
+
+    </ul>
+
+  </section>
+
+
+
+<section id="contact">
+
+  <h2>Connect with Us</h2>
+
+  <form onsubmit="sendForm(event)">
+
+    <div class="form-field">
+
+      <label for="name">Full Name</label>
+
+      <input type="text" id="name" required />
+
+    </div>
+
+    <div class="form-field">
+
+      <label for="email">Email Address</label>
+
+      <input type="email" id="email" required />
+
+    </div>
+
+    <div class="form-field">
+
+      <label for="phone">Phone Number</label>
+
+      <input type="tel" id="phone" required />
+
+    </div>
+
+    <div class="form-field">
+
+      <label for="message">Message</label>
+
+      <textarea id="message" rows="4" required></textarea>
+
+    </div>
+
+
+
+    <div class="form-field">
+
+      <label>
+
+        <input type="checkbox" id="consent1" required />
+
+        I agree to the 
+
+        <a href="AyushNexus_Privacy_Policy.pdf" target="_blank">Privacy Policy</a>.
+
+      </label>
+
+    </div>
+
+
+
+    <div class="form-field">
+
+      <label>
+
+        <input type="checkbox" id="consent2" required />
+
+        I consent to be contacted via email/phone/WhatsApp.
+
+      </label>
+
+    </div>
+
+
+
+    <button type="submit" class="form-submit">Save / Connect</button>
+
+  </form>
+
+</section>
+
+
+
+  <footer>
+
+    <p>&copy; 2025 AyushNexus Private Limited. All rights reserved.</p>
+
+  </footer>
+
+
+
+  <script>
+
+    function showLightbox(src) {
+
+      document.getElementById("lightbox-img").src = src;
+
+      document.getElementById("lightbox").style.display = "flex";
+
+    }
+
+
+
+    function sendForm(event) {
+
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+
+      const email = document.getElementById('email').value;
+
+      const phone = document.getElementById('phone').value;
+
+      const msg = document.getElementById('message').value;
+
+
+
+      const whatsappMsg = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${msg}`;
+
+      const whatsappURL = `https://wa.me/919035619018?text=${whatsappMsg}`;
+
+      window.open(whatsappURL, '_blank');
+
+
+
+      const mailtoLink = `mailto:info@ayushnexus.com?subject=New Inquiry from ${name}&body=${whatsappMsg.replace(/%0A/g, '\n')}`;
+
+      window.open(mailtoLink, '_blank');
+
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>" Make it colorful, elegant and premium as it is currently bland
+
+Gemini said
+Your current code has a solid structure, but it’s definitely hitting that "default browser" look. To make it feel premium, elegant, and eco-conscious, we need to move away from flat colors and basic borders.
+
+I’ve redesigned your CSS to include:
+
+A "Nature-Premium" Palette: Deep forest greens, soft creams, and metallic gold accents.
+
+Modern Typography: Swapping generic sans-serif for a mix of Serif (for authority) and clean Sans (for readability).
+
+Visual Depth: Using soft shadows, glassmorphism effects, and smooth hover transitions.
+
+The Enhanced Code
+Replace your entire <style> block and internal content with this:
+
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AyushNexus Private Limited – Exporters of biodegradable areca plates to the international market." />
-  <title>AyushNexus Private Limited</title>
+  <meta name="description" content="AyushNexus Private Limited – Premium Exporters of biodegradable areca plates." />
+  <title>AyushNexus | Premium Eco-Tableware</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --primary: #2d5a27; /* Forest Green */
+      --secondary: #a06f17; /* Earthy Gold */
+      --accent: #f4f1e8; /* Cream Pearl */
+      --text: #2c2c2c;
+      --white: #ffffff;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f7f1;
-      color: #1e1e1e;
+      font-family: 'Inter', sans-serif;
+      background: var(--accent);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    .form-field {
-      margin-bottom: 15px;
-      max-width: 300px;
-    }
-
-    .form-field label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    .form-field input,
-    .form-field textarea {
-      width: 100%;
-      padding: 6px;
-      border: 1px solid #aaa;
-      border-radius: 5px;
-      font-size: 0.9em;
-    }
-
-    .form-field input[type="checkbox"] {
-      width: auto;
-      display: inline-block;
-    }
-
-    .form-submit {
-      background: #a06f17;
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+    /* --- Header & Navigation --- */
     .header-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 30px;
-      background-color: #ffffff;
-      border-bottom: 4px solid #7a530f;
-      flex-wrap: wrap;
+      padding: 30px 8%;
+      background: var(--white);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .header-logo {
-      height: 120px;
+      height: 80px;
       width: auto;
-      flex-shrink: 0;
-    }
-
-    .header-text {
-      flex: 1;
-      text-align: center;
+      filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1));
     }
 
     .header-text h1 {
       margin: 0;
-      font-size: 2.8em;
-      color: #a06f17;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      color: var(--primary);
+      letter-spacing: -1px;
     }
 
     .header-text p {
-      margin: 8px 0 0 0;
-      font-size: 1.5em;
-      color: #a06f17;
-      font-weight: bold;
-    }
-
-    .header-contact {
-      text-align: right;
-      font-size: 0.9em;
-      color: #555;
-    }
-
-    .header-contact p {
-      margin: 2px 0;
+      margin: 0;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--secondary);
+      font-weight: 600;
     }
 
     nav {
+      background: var(--primary);
+      padding: 15px 0;
       text-align: center;
-      background: #f5f3eb;
-      padding: 12px;
-      border-bottom: 1px solid #ded6b8;
     }
 
     nav a {
-      color: #a06f17;
-      margin: 0 15px;
+      color: var(--accent);
+      margin: 0 20px;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: var(--transition);
+      opacity: 0.8;
     }
 
     nav a:hover {
-      color: #7a530f;
+      opacity: 1;
+      color: var(--secondary);
     }
 
+    /* --- Sections --- */
     section {
-      padding: 30px 20px;
-      background: #ffffff;
-      border-radius: 8px;
-      margin: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: #f5f3eb;
-      color: #777;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 40px;
-      border-top: 1px solid #ded6b8;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 50px;
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
     }
 
     h2 {
-      color: #a06f17;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 25px;
+      border-left: 5px solid var(--secondary);
+      padding-left: 15px;
     }
 
-    ul {
+    /* --- Products & Gallery --- */
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 0;
+    }
+
+    .product-list li {
+      background: var(--accent);
+      padding: 15px 20px;
+      border-radius: 12px;
       list-style: none;
-      padding-left: 0;
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
     }
 
-    ul li::before {
-      content: "🌿 ";
-      color: #4b8b3b;
-    }
-
-    .cta-buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background: #a06f17;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    .cta-buttons a:hover {
-      background: #7a530f;
+    .product-list li::before {
+      content: "✦";
+      margin-right: 10px;
+      color: var(--secondary);
     }
 
     .product-images {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
     }
 
     .product-images img {
       width: 100%;
-      max-width: 360px;
-      height: 300px;
+      height: 280px;
       object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-      border: 2px solid #a06f17;
-      padding: 4px;
-      background-color: #fff;
-      cursor: pointer;
-      transition: transform 0.3s ease;
+      border-radius: 15px;
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.05);
     }
 
-    @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .header-logo {
-        height: 100px;
-        margin-bottom: 10px;
-      }
-
-      .header-text h1,
-      .header-text p {
-        text-align: center;
-      }
-
-      .header-contact {
-        text-align: center;
-        align-self: bottom;
-        margin-top: 10px;
-      }
-
-      section {
-        margin: 15px 10px;
-      }
+    .product-images img:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(45, 90, 39, 0.2);
     }
 
-    /* Lightbox styling */
-    #lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      justify-content: center;
-      align-items: center;
+    /* --- Interactive Elements --- */
+    .cta-buttons {
+      margin-top: 30px;
     }
 
-    #lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #fff;
+    .cta-buttons a {
+      display: inline-block;
+      padding: 14px 30px;
+      margin-right: 15px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
     }
 
-    #lightbox:target {
-      display: flex;
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
     }
 
-    /* Contact Form */
-    .form-field {
-      margin-bottom: 15px;
+    .btn-secondary {
+      border: 2px solid var(--primary);
+      color: var(--primary);
     }
 
+    .btn-primary:hover {
+      background: var(--secondary);
+      transform: scale(1.05);
+    }
+
+    /* --- Contact Form --- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .form-field { margin-bottom: 20px; }
+    
     .form-field label {
       display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--primary);
     }
 
-    .form-field input,
-    .form-field textarea {
+    .form-field input, .form-field textarea {
       width: 100%;
-      padding: 8px;
-      border: 1px solid #aaa;
-      border-radius: 5px;
+      padding: 12px;
+      border: 2px solid #eee;
+      border-radius: 10px;
+      font-family: inherit;
+      transition: var(--transition);
     }
 
-    .form-field input[type="checkbox"] {
-      width: auto;
-      display: inline-block;
+    .form-field input:focus {
+      border-color: var(--secondary);
+      outline: none;
+      background: #fffcf5;
     }
 
     .form-submit {
-      background: #a06f17;
-      color: #fff;
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      padding: 15px;
       border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-weight: bold;
+      border-radius: 10px;
+      font-weight: 700;
       cursor: pointer;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-submit:hover {
+      background: var(--secondary);
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: #999;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 2000;
+      justify-content: center; align-items: center;
+    }
+
+    #lightbox img { max-width: 85%; border: 5px solid white; border-radius: 10px; }
+
+    @media (max-width: 768px) {
+      .header-container { flex-direction: column; text-align: center; }
+      .contact-grid { grid-template-columns: 1fr; }
+      section { padding: 30px 20px; }
     }
   </style>
 </head>
-
 <body>
 
-  <div class="header-container">
+  <header class="header-container">
     <img src="header.jpg" alt="Ayush Nexus Logo" class="header-logo" />
     <div class="header-text">
       <h1>AyushNexus</h1>
-      <p>Exporting Eco-Conscious Tableware</p>
+      <p>Luxury Eco-Tableware</p>
     </div>
-    <div class="header-contact">
-      <p><strong>Email:</strong> info@ayushnexus.com</p>
-      <p><strong>Phone:</strong> +91-9035619018</p>
+    <div style="text-align: right;" class="header-contact">
+      <div style="color: var(--primary); font-weight: 700;">info@ayushnexus.com</div>
+      <div style="color: var(--secondary);">+91-9035619018</div>
     </div>
-  </div>
+  </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#images">Gallery</a>
-    <a href="#exports">Exports</a>
-    <a href="#certs">Certifications</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">Our Story</a>
+    <a href="#products">Collections</a>
+    <a href="#exports">Global Reach</a>
+    <a href="#contact">Inquiry</a>
   </nav>
 
   <section id="about">
-    <h2>About Us</h2>
-    <p>We are committed to providing eco-friendly alternatives through our biodegradable areca plates, serving the global market with sustainability in mind.</p>
+    <h2>Elegance Meets Sustainability</h2>
+    <p>We redefine disposable dining. Our areca leaf products offer the sophisticated look of wood with the heart of nature. Handcrafted, biodegradable, and chemically-free—serving the world from India’s finest groves.</p>
   </section>
 
   <section id="products">
-    <h2>Our Products</h2>
-    <ul>
+    <h2>The Collection</h2>
+    <ul class="product-list">
       <li>Round Areca Plates</li>
       <li>Square Areca Plates</li>
-      <li>Areca Bowls</li>
+      <li>Artisanal Areca Bowls</li>
       <li>Compartmental Trays</li>
     </ul>
+    
+    <div class="product-images" id="images">
+      <img src="Biodegradable-Palm-Leaf-Plate.jpeg" alt="Plate 1" onclick="showLightbox(this.src)" />
+      <img src="bidegradableplate.jpeg" alt="Plate 2" onclick="showLightbox(this.src)" />
+      <img src="palmleafplate.jpeg" alt="Plate 3" onclick="showLightbox(this.src)" />
+      <img src="arecaplates.jpg" alt="Plate 4" onclick="showLightbox(this.src)" />
+    </div>
+
     <div class="cta-buttons">
-      <a href="#contact">Request Quote</a>
-      <a href="AyushNexus_Catalog.pdf" download>Download Catalog</a>
+      <a href="#contact" class="btn-primary">Request a Bespoke Quote</a>
+      <a href="AyushNexus_Catalog.pdf" class="btn-secondary" download>Download Catalog</a>
     </div>
   </section>
 
-  <section id="images" class="product-images">
-    <img src="Biodegradable-Palm-Leaf-Plate.jpeg" alt="Biodegradable Palm Leaf Plate" onclick="showLightbox(this.src)" />
-    <img src="bidegradableplate.jpeg" alt="Biodegradable Plate" onclick="showLightbox(this.src)" />
-    <img src="palmleafplate.jpeg" alt="Palm Leaf Plate" onclick="showLightbox(this.src)" />
-    <img src="arecaplates.jpg" alt="Areca Plates" onclick="showLightbox(this.src)" />
+  <section id="exports">
+    <div class="contact-grid">
+      <div>
+        <h2>Global Partnerships</h2>
+        <p>Currently exporting premium quality to <strong>Germany, USA, UK, Canada, Australia, and Japan.</strong></p>
+        <p>Logistics handled via Air & Sea with full compliance: FOB, CIF, or DDP.</p>
+      </div>
+      <div>
+        <h2>Quality Assured</h2>
+        <ul class="product-list" style="grid-template-columns: 1fr;">
+          <li>ISO 9001:2015 Certified</li>
+          <li>US-FDA Compliance</li>
+          <li>SGS Tested & FSSAI Approved</li>
+        </ul>
+      </div>
+    </div>
   </section>
+
+  <section id="contact">
+    <h2>Connect With Us</h2>
+    <form onsubmit="sendForm(event)">
+      <div class="contact-grid">
+        <div>
+          <div class="form-field">
+            <label>FULL NAME</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-field">
+            <label>EMAIL ADDRESS</label>
+            <input type="email" id="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-field">
+            <label>PHONE NUMBER</label>
+            <input type="tel" id="phone" placeholder="+1 234 567 890" required />
+          </div>
+        </div>
+        <div>
+          <div class="form-field">
+            <label>YOUR MESSAGE</label>
+            <textarea id="message" rows="8" placeholder="Tell us about your requirements..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">SEND INQUIRY</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 AyushNexus Private Limited. Crafted for a Greener Planet.</p>
+  </footer>
 
   <div id="lightbox" onclick="this.style.display='none'">
     <img id="lightbox-img" src="" alt="Preview" />
   </div>
-
-  <section id="exports">
-    <h2>Global Exports</h2>
-    <p>We export to:</p>
-    <ul>
-      <li>Germany, USA, UK, Canada, Australia, Japan</li>
-      <li>Shipping via Air & Sea (FOB / CIF / DDP)</li>
-      <li>Documents: IEC, RCMC, FSSAI, Phytosanitary Certificates</li>
-    </ul>
-  </section>
-
-  <section id="certs">
-    <h2>Certifications</h2>
-    <ul>
-      <li>FSSAI</li>
-      <li>ISO 9001:2015</li>
-      <li>SGS Tested</li>
-      <li>FDA (US) Compliance</li>
-    </ul>
-  </section>
-
-<section id="contact">
-  <h2>Connect with Us</h2>
-  <form onsubmit="sendForm(event)">
-    <div class="form-field">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" required />
-    </div>
-    <div class="form-field">
-      <label for="email">Email Address</label>
-      <input type="email" id="email" required />
-    </div>
-    <div class="form-field">
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" required />
-    </div>
-    <div class="form-field">
-      <label for="message">Message</label>
-      <textarea id="message" rows="4" required></textarea>
-    </div>
-
-    <div class="form-field">
-      <label>
-        <input type="checkbox" id="consent1" required />
-        I agree to the 
-        <a href="AyushNexus_Privacy_Policy.pdf" target="_blank">Privacy Policy</a>.
-      </label>
-    </div>
-
-    <div class="form-field">
-      <label>
-        <input type="checkbox" id="consent2" required />
-        I consent to be contacted via email/phone/WhatsApp.
-      </label>
-    </div>
-
-    <button type="submit" class="form-submit">Save / Connect</button>
-  </form>
-</section>
-
-  <footer>
-    <p>&copy; 2025 AyushNexus Private Limited. All rights reserved.</p>
-  </footer>
 
   <script>
     function showLightbox(src) {
@@ -397,12 +1213,9 @@
       const phone = document.getElementById('phone').value;
       const msg = document.getElementById('message').value;
 
-      const whatsappMsg = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${msg}`;
+      const whatsappMsg = `*New Inquiry from AyushNexus*%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Message:* ${msg}`;
       const whatsappURL = `https://wa.me/919035619018?text=${whatsappMsg}`;
       window.open(whatsappURL, '_blank');
-
-      const mailtoLink = `mailto:info@ayushnexus.com?subject=New Inquiry from ${name}&body=${whatsappMsg.replace(/%0A/g, '\n')}`;
-      window.open(mailtoLink, '_blank');
     }
   </script>
 
